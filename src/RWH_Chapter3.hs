@@ -49,7 +49,12 @@ myLength :: Num p => [a] -> p
 myLength [] = 0
 myLength (_:xs) = 1 + myLength xs
 
+myMean [] = 0
+myMean l = sum l `div` length l
+
 main = do
   putStrLn ("type of \"" ++ (show b) ++ "\" is: " ++ (show (typeOf b)))
   putStrLn ("type of \"" ++ (show (bookTitle b)) ++ "\" is: " ++ (show (typeOf (title b))))
   putStrLn (show cheeses)
+  putStrLn(show (myLength [1..1000]))
+  putStrLn(show (myMean [1..1000]))
