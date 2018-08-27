@@ -18,6 +18,8 @@ splitLines cs =
 
 isLineTerminator c = c == '\r' || c == '\n'
 
+fixLines inout = unlines (splitLines input)
+
 
 main = mainWith myFunction
   where mainWith function = do
