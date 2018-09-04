@@ -18,7 +18,7 @@ splitLines cs =
 
 isLineTerminator c = c == '\r' || c == '\n'
 
-fixLines inout = unlines (splitLines input)
+fixLines input = unlines (splitLines input)
 
 
 main = mainWith myFunction
