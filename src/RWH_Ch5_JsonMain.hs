@@ -5,8 +5,13 @@ module RWH_Ch5_JsonMain (main) where
 -- contrary to the instructions in RWH I did not have to list the used module files explicitly
 
 import RWH_Ch5_Json
+import RWH_Ch5_PutJson
 
-main = print (JObject [("foo", JNumber 1), ("bar", JBool False)])
+obj = JObject [("foo", JNumber 1), ("bar", JBool False)]
+
+main = do
+  putStrLn (show obj)
+  putStrLn (renderJValue obj)
 
 
 
